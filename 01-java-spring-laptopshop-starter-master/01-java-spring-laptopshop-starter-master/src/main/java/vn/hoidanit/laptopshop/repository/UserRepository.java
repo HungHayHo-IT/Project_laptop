@@ -12,5 +12,14 @@ import vn.hoidanit.laptopshop.domain.User;
 public interface UserRepository extends JpaRepository<User, Long> {
     User save(User nguyenhung);
 
+    void deleteById(long id);
+
     List<User> findByEmail(String email);
+
+    List<User> findOneByEmail(String email);
+
+    List<User> findAll();
+
+    User findById(long id);
+
 }
